@@ -12,11 +12,11 @@ class PlayerSeeder extends Seeder
      */
     public function run(): void
     {
-        Player::create(['name' => 'Cipriano', 'ranking' => 1000, 'retired' => true]);
-        Player::create(['name' => 'Novak Djokovic', 'ranking' => 1, 'retired' => false]);
-        Player::create(['name' => 'Carlos Alcaraz', 'ranking' => 2, 'retired' => false]);
-        Player::create(['name' => 'Jannik Sinner', 'ranking' => 3, 'retired' => false]);
-        Player::create(['name' => 'Roger Federer', 'ranking' => 99, 'retired' => true]);
-        Player::create(['name' => 'Rafael Nadal', 'ranking' => 98, 'retired' => true]);
+        Player::firstOrCreate(['name' => 'Cipriano', 'ranking' => 1000, 'retired' => true]);
+        Player::firstOrCreate(['name' => 'Novak Djokovic', 'ranking' => 1, 'retired' => false]);
+        Player::firstOrCreate(['name' => 'Carlos Alcaraz', 'ranking' => 2, 'retired' => false]);
+        Player::firstOrCreate(['name' => 'Jannik Sinner', 'ranking' => 3, 'retired' => false]);
+        Player::firstOrCreate(['name' => 'Roger Federer', 'ranking' => 99, 'retired' => true]);
+        Player::firstOrCreate(['name' => 'Rafael Nadal', 'ranking' => 98, 'retired' => true]);
     }
 }
